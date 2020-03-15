@@ -29,7 +29,6 @@ public class MainController {
 	public String authenticated(@RequestParam(value = "oauth_token") String oauthToken,
 			@RequestParam(value = "oauth_verifier") String oauthVerifier, Model model) throws Exception {
 
-		// accessToken‚ÆaccessTokenSecret‚ğ¶¬‚·‚é
 		provider.retrieveAccessToken(consumer, oauthVerifier);
 
 		return "index";
